@@ -26,3 +26,9 @@ ShowConfirm({
     ]
 })
 ```
+
+### `Default` button level
+This one is the default one (as its name says). Its normal behaviour is that when the mouse is over it, the background color changes to black and the text color changes to white.
+
+### `Delete` button level
+The _Delete_ button level enables the user to see the background color as red and the text color as white.
