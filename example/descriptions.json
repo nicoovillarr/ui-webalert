@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Action",
+        "desc":"Movies in the action genre are fast-paced and include a lot of action like fight scenes, chase scenes, and slow-motion shots. These high-octane films are more about the execution of the plot rather than the plot itself. Cop movies, disaster films, and some spy films all fall under the action category.",
+        "reference":"https://www.masterclass.com/articles/how-to-identify-film-genres#13-classic-movie-genres"
+    },
+    {
+        "name": "Adventure",
+        "desc":"Films in the adventure genre usually contain the same basic genre elements of an action movie. Adventure movies are usually set in an exotic, far away, or unfamiliar locale.",
+        "reference":"https://www.masterclass.com/articles/how-to-identify-film-genres#13-classic-movie-genres"
+    },
+    {
+        "name": "Comedy",
+        "desc":"Comedy films are funny and entertaining. Good comedy movies are less about making constant jokes, and more about presenting a universally relatable, real-life story with complex characters who learn an important lesson.",
+        "reference":"https://www.masterclass.com/articles/how-to-identify-film-genres#13-classic-movie-genres"
+    },
+    { 
+        "name": "Musical",
+        "desc": "Should contain several scenes of characters bursting into song aimed at the viewer (this excludes songs performed for the enjoyment of other characters that may be viewing) while the rest of the time, usually but not exclusively, portraying a narrative that alludes to another Genre.",
+        "reference": "https://help.imdb.com/article/contribution/titles/genres/GZDRMS6R742JRGAG#"
+    }
+]

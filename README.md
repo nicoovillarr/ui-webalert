@@ -1,2 +1,2 @@
 # ui-webalert
- UI Alert design for web applications
+ui-webalert is a JavaScript library to  show custom confirmation popups.
