@@ -2,6 +2,8 @@
 ui-webalert is a JavaScript library to  show custom confirmation popups.
 
 ## Usage
+
+## Usage
 You can simply show a normal confirmation popup with:
 ```
 ShowConfirm({
