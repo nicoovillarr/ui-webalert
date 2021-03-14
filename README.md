@@ -7,7 +7,7 @@ You can get this script by copying the following code inside the _head_ tag of y
 <script src='https://cdn.jsdelivr.net/gh/nicoovillarr/ui-webalert/ui-alert.js'></script>
 
 Minified version
-<script src='https://cdn.jsdelivr.net/gh/nicoovillarr/ui-webalert/ui-alert.js'></script>
+<script src='https://cdn.jsdelivr.net/gh/nicoovillarr/ui-webalert/ui-alert.min.js'></script>
 ```
 
 ## Usage
