@@ -1,7 +1,7 @@
 # ui-webalert
 ui-webalert is a JavaScript library to  show custom confirmation popups.
 
-## Get Started
+## Get Started 
 You can get this script by copying the following code inside the _head_ tag of your webpage:
 ```
 <script src='https://cdn.jsdelivr.net/gh/nicoovillarr/ui-webalert/ui-alert.js'></script>
