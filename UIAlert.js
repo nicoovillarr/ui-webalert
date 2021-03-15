@@ -22,6 +22,29 @@ class UIAlert {
             console.error("UIAlert couldn't find \"message\" value.")
             return
         }
+
+        const buttonHandler = (e, isOver, btnLevel) => {
+            if (isOver) {
+                switch (btnLevel) {
+                    case ButtonLevel.Delete:
+                        e.style.color = "white"
+                        e.style.backgroundColor = "red"
+                        break
+                    case ButtonLevel.Default:
+                    default:
+                        e.style.color = "white"
+                        e.style.backgroundColor = "black"
+                        break
+                }
+            } else {
+                e.style.color = "black"
+                e.style.backgroundColor = "white"
+            }
+        }
+
+        const closeHandler = (e, isOver) => {
+            e.style.opacity = isOver ? "1" : "0.5"
+        }
     
         let confirmBackground = document.createElement("div")
         confirmBackground.style = "width: 100%;height: 100%;background-color: rgba(0,0,0,0.5);position: fixed;top: 0;left: 0; opacity: 0; transition: opacity .15s;"
@@ -45,8 +68,8 @@ class UIAlert {
         closeContainer.style = "width: 24px;height:24px;position:absolute;right:8px;top:50%;transform: translateY(-50%);cursor:pointer;opacity:0.5;transition: opacity .25s"
         header.appendChild(closeContainer)
 
-        closeContainer.addEventListener('mouseover', x => { this.#CloseMouse(closeContainer, true) })
-        closeContainer.addEventListener('mouseleave', x => { this.#CloseMouse(closeContainer, false) })
+        closeContainer.addEventListener('mouseover', x => { closeHandler(closeContainer, true) })
+        closeContainer.addEventListener('mouseleave', x => { closeHandler(closeContainer, false) })
 
         let close = document.createElement("div")
         close.classList.add("uialert-close")
@@ -76,14 +99,14 @@ class UIAlert {
                 let btn = document.createElement("button")
                 btn.innerHTML = action['value']
                 btn.style = "flex-basis:100%;background-color:transparent;cursor:pointer;border:none;outline:nonecursor:pointer;;padding:12px;transition: all .15s;"
-                btn.addEventListener('mouseleave', x => { this.#ButtonMouse(btn, false) })
-                btn.addEventListener('mouseover', x => { this.#ButtonMouse(btn, true, 1) })
+                btn.addEventListener('mouseleave', x => { buttonHandler(btn, false) })
+                btn.addEventListener('mouseover', x => { buttonHandler(btn, true, 1) })
                 controls.appendChild(btn)
     
                 if (action.hasOwnProperty("level")) {
                     let level = action["level"]
-                    btn.removeEventListener('mouseover', this.#ButtonMouse)
-                    btn.addEventListener('mouseover', x => { this.#ButtonMouse(btn, true, level) })
+                    btn.removeEventListener('mouseover', buttonHandler)
+                    btn.addEventListener('mouseover', x => { buttonHandler(btn, true, level) })
                 }
 
                 if (action.hasOwnProperty('then') && typeof action['then'] != 'function') {
@@ -103,8 +126,8 @@ class UIAlert {
             let btn = document.createElement("button")
             btn.innerHTML = "Ok"
             btn.style = "flex-basis:100%;background-color:transparent;cursor:pointer;border:none;outline:none;padding:12px;transition: all .15s;"
-            btn.addEventListener('mouseleave', x => { this.#ButtonMouse(btn, false) })
-            btn.addEventListener('mouseover', x => { this.#ButtonMouse(btn, true, 1) })
+            btn.addEventListener('mouseleave', x => { buttonHandler(btn, false) })
+            btn.addEventListener('mouseover', x => { buttonHandler(btn, true, 1) })
     
             controls.appendChild(btn)
             btn.addEventListener('click', x => { this.Close() })
@@ -160,28 +183,5 @@ class UIAlert {
                 alertStack.splice(0, 1)
             }
         }, 500)
-    }
-
-    #ButtonMouse (e, isOver, btnLevel) {
-        if (isOver) {
-            switch (btnLevel) {
-                case ButtonLevel.Delete:
-                    e.style.color = "white"
-                    e.style.backgroundColor = "red"
-                    break
-                case ButtonLevel.Default:
-                default:
-                    e.style.color = "white"
-                    e.style.backgroundColor = "black"
-                    break
-            }
-        } else {
-            e.style.color = "black"
-            e.style.backgroundColor = "white"
-        }
-    }
-
-    #CloseMouse (e, isOver) {
-        e.style.opacity = isOver ? "1" : "0.5"
     }
 }
