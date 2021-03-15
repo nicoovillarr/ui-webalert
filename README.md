@@ -4,10 +4,10 @@ ui-webhelper is a JavaScript library to  show custom confirmation popups.
 ## Get started
 You can get this script by copying the following code inside the _head_ tag of your webpage:
 ```
-<script src='https://cdn.jsdelivr.net/gh/nicoovillarr/ui-webhelper/WebHelper.js'></script>
+<script src='https://cdn.jsdelivr.net/gh/nicoovillarr/ui-webhelper@1.0.0/ui-alert.js'></script>
 
 Minified version
-<script src='https://cdn.jsdelivr.net/gh/nicoovillarr/ui-webhelper/WebHelper.min.js'></script>
+<script src='https://cdn.jsdelivr.net/gh/nicoovillarr/ui-webhelper@1.0.0/ui-alert.min.js'></script>
 ```
 
 ## Example
