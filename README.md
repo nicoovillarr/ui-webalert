@@ -1,17 +1,17 @@
-# ui-webalert
-ui-webalert is a JavaScript library to  show custom confirmation popups.
+# ui-webhelper
+ui-webhelper is a JavaScript library to  show custom confirmation popups.
 
 ## Get started
 You can get this script by copying the following code inside the _head_ tag of your webpage:
 ```
-<script src='https://cdn.jsdelivr.net/gh/nicoovillarr/ui-webalert/ui-alert.js'></script>
+<script src='https://cdn.jsdelivr.net/gh/nicoovillarr/ui-webhelper/WebHelper.js'></script>
 
 Minified version
-<script src='https://cdn.jsdelivr.net/gh/nicoovillarr/ui-webalert/ui-alert.min.js'></script>
+<script src='https://cdn.jsdelivr.net/gh/nicoovillarr/ui-webhelper/WebHelper.min.js'></script>
 ```
 
 ## Example
-By clicking [here](https://nicoovillarr.github.io/ui-webalert/) you can see an example of this JavaScript library.
+By clicking [here](https://nicoovillarr.github.io/ui-webhelper/) you can see an example of this JavaScript library.
 
 ## Usage
 You can simply show a normal confirmation popup with:
