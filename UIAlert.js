@@ -1,6 +1,6 @@
 /**!
- * UIAlert 1.1.0-rc.1
- * @author	Nicolás Villarr   <nicolasvillar00@gmail.com>
+ * UIAlert 1.1.0-rc.3
+ * @author	Nicolás Villar   <nicolasvillar00@gmail.com>
  */
 
 const ButtonLevel = Object.freeze({"Default":1, "Delete":2});
