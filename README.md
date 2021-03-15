@@ -10,6 +10,9 @@ Minified version
 <script src='https://cdn.jsdelivr.net/gh/nicoovillarr/ui-webalert/ui-alert.min.js'></script>
 ```
 
+## Example
+By clicking [here](https://nicoovillarr.github.io/ui-webalert/) you can see an example of this JavaScript library.
+
 ## Usage
 You can simply show a normal confirmation popup with:
 ```
