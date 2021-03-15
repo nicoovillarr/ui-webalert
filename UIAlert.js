@@ -1,5 +1,5 @@
 const ButtonLevel = Object.freeze({"Default":1, "Delete":2});
-const confirmStack = []
+const alertStack = []
 
 class UIAlert {
     constructor(data) {
@@ -80,15 +80,16 @@ class UIAlert {
                     btn.removeEventListener('mouseover', this.#ButtonMouse)
                     btn.addEventListener('mouseover', x => { this.#ButtonMouse(btn, true, level) })
                 }
+
+                if (action.hasOwnProperty('then') && typeof action['then'] != 'function') {
+                    console.error("UIAlert's then is not a function.")
+                    return;
+                }
     
                 btn.addEventListener('click', e => {
                     if (action.hasOwnProperty('then')) {
                         var method = action['then']
-                        if (typeof method != 'function') {
-                            console.error("UIAlert's then is not a function.")
-                        } else {
-                            method(e)
-                        }
+                        method(e)
                     }
                     this.Close()
                 })
@@ -118,12 +119,16 @@ class UIAlert {
 
         this.element = confirmBackground
         this.close = close
-        return this
+        return
     }
 
     Show() {
+        if (this.element == null) {
+            return
+        }
+
         if (document.getElementById("ui-alert-container") != null) {
-            confirmStack.push(this)
+            alertStack.push(this)
             return
         }
 
@@ -145,9 +150,9 @@ class UIAlert {
             this.element.remove()
             this.closeStyle.remove()
 
-            if (confirmStack.length > 0) {
-                confirmStack[0].Show()
-                confirmStack.splice(0, 1)
+            if (alertStack.length > 0) {
+                alertStack[0].Show()
+                alertStack.splice(0, 1)
             }
         }, 500)
     }
